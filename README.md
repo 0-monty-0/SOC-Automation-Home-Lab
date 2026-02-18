@@ -9,7 +9,7 @@ The goal of this lab was to gain hands-on experience with SIEM, SOAR, and incide
 02/18/2025
 
 ## Authors
-Authored by [Sheila Montecino](https://github.com/0-monty-0), [Steven Mah](https://www.mydfir.com/)
+Authored by [Sheila Montecino](https://github.com/0-monty-0)
 
 ## Architecture
 The following diagram shows the workflow of the SOC automation pipeline:
@@ -26,14 +26,15 @@ The following diagram shows the workflow of the SOC automation pipeline:
 7. Response actions are triggered based on the alert.
   
 ### Tools & Technologies 
-- Oracle VirtualBox with Windows 11 pro (endpoint simulation)
-- Vultr (Virtualization and cloud infastructure)
-- Wazuh (SIEM and endpoint detection)
-- Apache Cassandra (backend database)
-- Elasticsearch (log storage and search) 
-- TheHive (incident response and case management)
-- Shuffle (SOAR and automation)
-- VirusTotal (threat intelligence enrichment)
+- Virtualization: Oracle VirtualBox
+- Endpoint Simulation: Windows 11 pro
+- Cloud Infastructure: Vultr 
+- SIEM: Wazuh 
+- Database: Apache Cassandra 
+- Log Storage and Search: Elasticsearch  
+- Incident Response Platform: TheHive 
+- SOAR: Shuffle
+- Threat Intelligence: VirusTotal 
 
 ## Objectives
 
