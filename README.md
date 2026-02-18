@@ -1,8 +1,9 @@
-# SOC-Automation-Home-Lab
+# SOC-Automation-Home-Lab-Project
 
-This project demonstrates a fully automated Security Operations Center (SOC) workflow that detects, enriches, and responds to security incidents. The lab integrates Wazuh for threat detection, Shuffle for automation, and TheHive for case management.
+## Overview
+This project demonstrates a fully automated Security Operations Center (SOC) workflow designed to detect, enrich, and respond to security incidents. The environment simulates real-world security monitoring by integrating endpoint detection, threat intelligence enrichment, case management, and automated response.
 
-The environment simulates real-world security operations by generating malicious activity and automating incident response.
+The goal of this lab was to gain hands-on experience with SIEM, SOAR, and incident response tools while understanding the end-to-end SOC workflow.
 
 ## Version
 02/18/2025
@@ -13,16 +14,16 @@ Authored by [Sheila Montecino](https://github.com/0-monty-0), [Steven Mah](https
 ## Architecture
 The following diagram shows the workflow of the SOC automation pipeline:
 
-![SOC Architecture](SOC-Automation-Project-Diagram.png)
+![SOC Architecture](SOC-pic-wo-flow.png)
 
-The Windows endpoint sends logs to the Wazuh manager, which triggers alerts. Alerts are forwarded to Shuffle, where automated enrichment and response workflows occur. Enriched alerts are then sent to TheHive for incident tracking and investigation.
-
-## Objectives
-- Simulate real-world SOC workflows
-- Detect credential dumping attacks
-- Automate incident enrichment and response
-- Reduce manual alert triage
-- Gain hands-on experience with SIEM and SOAR tools
+### Workflow Summary
+1. A Windows endpoint generates security events.
+2. Events are sent to the Wazuh Manager for detection and alerting.
+3. Alerts are forwarded to Shuffle for automation.
+4. Shuffle enriches Indicators of Compromise (IOCs) using threat intelligence.
+5. Automated email notifications are sent to the SOC analyst.
+6. Incidents are created and tracked in TheHive.
+7. Response actions are triggered based on the alert.
   
 ### Tools & Technologies 
 - Oracle VirtualBox with Windows 11 pro (endpoint simulation)
@@ -34,38 +35,53 @@ The Windows endpoint sends logs to the Wazuh manager, which triggers alerts. Ale
 - Shuffle (SOAR and automation)
 - VirusTotal (threat intelligence enrichment)
 
+## Objectives
+
+- Simulate a real-world SOC environment.
+- Detect malicious activity and generate alerts.
+- Automate threat intelligence enrichment.
+- Reduce manual incident triage.
+- Gain hands-on experience with security monitoring and response.
+- Understand the incident lifecycle from detection to remediation.
+
 ## Lab Setup
 
 The lab environment was built using virtual machines and cloud infrastructure.
 
-### Steps:
-1. Deployed Windows 11 endpoint and installed Wazuh agent.
-2. Configured Wazuh manager for centralized log monitoring.
-3. Installed and configured Elasticsearch.
-4. Set up TheHive and connected Cassandra.
-5. Created Shuffle workflows for automation.
-6. Integrated VirusTotal API for threat intelligence.
+### Key Setup Steps
+1. Created a virtualized environment and deployed a Windows 11 endpoint.
+2. Installed and configured the Wazuh agent on the Windows system.
+3. Configured the Wazuh Manager to collect and analyze logs.
+4. Installed Elasticsearch for centralized log storage and search.
+5. Deployed TheHive and configured Apache Cassandra as the backend database.
+6. Set up Shuffle and created automation workflows.
+7. Integrated VirusTotal API for automated threat intelligence enrichment.
+8. Configured email alerting for incident notifications.
 
 ## Attack Simulation
 
-Credential dumping was simulated using Mimikatz to generate malicious activity.
+Credential dumping activity was simulated using Mimikatz to generate malicious behavior on the Windows endpoint.
 
-The attack triggered:
-- Endpoint alert in Wazuh
-- Automated workflow in Shuffle
-- Hash enrichment via VirusTotal
-- Case creation in TheHive
-- Email alert notification
+This attack triggered:
+- Detection and alert generation in Wazuh.
+- Automated alert forwarding to Shuffle.
+- IOC extraction and hash enrichment.
+- Automated threat intelligence lookup in VirusTotal.
+- Email notification to the SOC analyst.
+- Case creation in TheHive for incident tracking.
 
 ## Automation Workflow
 
-Shuffle was configured to:
+Shuffle was configured to automate incident response processes, including:
 
-- Receive alerts from Wazuh via webhook
-- Extract malicious hash values
-- Perform threat intelligence enrichment
-- Send automated email alerts
-- Create incident cases in TheHive
+- Receiving alerts from Wazuh via webhook.
+- Extracting malicious hash values from alerts.
+- Performing SHA256 hash analysis.
+- Enriching indicators using VirusTotal.
+- Sending automated email notifications.
+- Creating and updating cases in TheHive.
+
+This automation reduces manual workload and improves incident response speed.
 
 ## Screenshots
 
@@ -78,27 +94,34 @@ Shuffle was configured to:
 ### TheHive Case
 ![TheHive](./images/thehive.png)
 
-## Challenges & Troubleshooting
+## Challenges and Troubleshooting
 
-- Resolved Elasticsearch connectivity issues.
-- Troubleshot service failures during TheHive setup.
-- Debugged webhook communication between Wazuh and Shuffle.
-- Fixed network configuration and firewall rules.
+During this project, several technical challenges were encountered and resolved:
+
+- Troubleshooting connectivity issues between Elasticsearch and TheHive.
+- Resolving backend service failures during setup.
+- Debugging webhook communication between Wazuh and Shuffle.
+- Fixing configuration and networking issues between virtual machines.
+- Ensuring proper alert forwarding and automation triggers.
+
+These challenges strengthened troubleshooting, system administration, and integration skills.
 
 ## Future Improvements
 
-- Add brute-force and lateral movement attack simulations
-- Integrate additional threat intelligence sources
-- Implement automated endpoint isolation
-- Deploy the lab fully in the cloud
-- Add Slack or SIEM dashboards
+Planned enhancements for this lab include:
+
+- Simulating additional attacks such as brute-force, lateral movement, and persistence.
+- Integrating additional threat intelligence sources.
+- Implementing automated endpoint isolation.
+- Expanding monitoring to cloud-based environments.
+- Creating custom detection rules and dashboards.
+- Adding Slack or messaging alert integrations.
+- Building threat hunting workflows.
 
 ## Lessons Learned
 
 This project strengthened my understanding of:
 
-- SOC workflows and incident lifecycle
-- Threat detection and automation
-- SIEM and SOAR integration
-- Real-world troubleshooting and system configuration
+This project provided practical experience in building and operating a SOC environment. It improved my understanding of security monitoring, automation, and the incident response lifecycle. Additionally, it strengthened my troubleshooting skills and ability to integrate multiple security tools into a unified workflow.
+
 
