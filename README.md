@@ -13,7 +13,7 @@ Authored by [Sheila Montecino](https://github.com/0-monty-0), [Steven Mah](https
 ## Architecture
 The following diagram shows the workflow of the SOC automation pipeline:
 
-![SOC Architecture](SOC Automation Project Diagram.png)
+![SOC Architecture](SOCAutomationProjectDiagram.png)
 
 The Windows endpoint sends logs to the Wazuh manager, which triggers alerts. Alerts are forwarded to Shuffle, where automated enrichment and response workflows occur. Enriched alerts are then sent to TheHive for incident tracking and investigation.
 
