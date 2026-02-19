@@ -6,7 +6,7 @@ This project demonstrates a fully automated Security Operations Center (SOC) wor
 The goal of this lab was to gain hands-on experience with SIEM, SOAR, and incident response tools while understanding the end-to-end SOC workflow.
 
 ## Version
-02/18/2025
+02/18/2026
 
 ## Authors
 Authored by [Sheila Montecino](https://github.com/0-monty-0)
@@ -47,7 +47,7 @@ The following diagram shows the workflow of the SOC automation pipeline:
 
 ## Lab Setup
 
-The lab environment was built using virtual machines and cloud infrastructure.
+The lab environment was built using a virtual machine and cloud infrastructure.
 
 ### Key Setup Steps
 1. Created a virtualized environment and deployed a Windows 11 endpoint.
@@ -124,5 +124,14 @@ Planned enhancements for this lab include:
 This project strengthened my understanding of:
 
 This project provided practical experience in building and operating a SOC environment. It improved my understanding of security monitoring, automation, and the incident response lifecycle. Additionally, it strengthened my troubleshooting skills and ability to integrate multiple security tools into a unified workflow.
+
+## References and Acknowledgments
+
+This project was inspired by a SOC automation tutorial by Steven Mah:
+[https://www.youtube.com/watch?v=XR3eamn8ydQ]
+
+The environment was independently deployed, configured, and 
+troubleshot to gain hands-on experience with security monitoring, 
+automation, and incident response workflows.
 
 
