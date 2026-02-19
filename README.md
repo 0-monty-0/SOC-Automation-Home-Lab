@@ -87,13 +87,13 @@ This automation reduces manual workload and improves incident response speed.
 ## Screenshots
 
 ### Wazuh Alert
-![Alert](./images/wazuh-alert.png)
+![Alert](wazuh-alerts.png)
 
 ### Shuffle Workflow
-![Workflow](./images/shuffle.png)
+![Workflow](shuffle-sc.png)
 
 ### TheHive Case
-![TheHive](./images/thehive.png)
+![TheHive](thehive-sc.png)
 
 ## Challenges and Troubleshooting
 
